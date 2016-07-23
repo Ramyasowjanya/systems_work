@@ -1,4 +1,4 @@
-/*#define _CRT_SECURE_NO_WARNINGS
+#define _CRT_SECURE_NO_WARNINGS
 #include<stdio.h>
 #include<conio.h>
 #include<stdlib.h>
@@ -45,12 +45,10 @@ void findCommonAncestor(struct node *temp,int *ancestor,int in1,int in2,int *fou
 	{
 		if (temp->left != NULL)
 		{
-			//*ancestor = temp->data;
 			findCommonAncestor(temp->left, ancestor, in1, in2, found, an1, an2, level + 1);
 		}
 		if (temp->right != NULL)
 		{
-			//	*ancestor = temp->data;
 			findCommonAncestor(temp->right, ancestor, in1, in2, found, an1, an2, level + 1);
 		}
 		if (*found == 2)
@@ -99,4 +97,4 @@ void main()
 	findCommonAncestor(temp,&ancestor,in1,in2,&found,&an1,&an2,level);
 	printf("%d",ancestor);
 	_getch();
-}*/
+}
